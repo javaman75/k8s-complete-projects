@@ -36,7 +36,7 @@ resource "random_integer" "pod_cidr" {
 
 locals {
   location             = var.region
-  resource_name        = "${resource_group_name}-${random_id.this.dec}"
+  resource_name        = join("-", [var.resource_group_name, random_id.this.dec])
   aca_name             = "${local.resource_name}-environment"
   container_image      = "cohenj/simple-webservice:latest"
   acr_name             = "${replace(local.resource_name, "-", "")}acr"
