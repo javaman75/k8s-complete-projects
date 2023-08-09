@@ -1,5 +1,7 @@
-# k8s-complete-projects
-complete working solutions
+# The Project
+This project is not a AKS, but instead in an example of downloading and image in DockerHub and use it
+to instantiate a container running in a node.
+
 
     % terraform init
     % terraform plan
